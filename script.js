@@ -30,7 +30,7 @@ map.addControl(new mapboxgl.FullscreenControl());
 const geocoder = new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
     mapboxgl: mapboxgl,
-    countries: "us",
+    countries: "ca",
     //place: "Toronto"
 });
 
@@ -44,9 +44,9 @@ Use get expression to categorise data based on air pollition values
 --------------------------------------------------------------------*/
 //Add data source and draw initial visiualization of layer
 map.on('load', () => {
-    map.addSource('park-data', {
+    map.addSource('crime-data', {
         //adding nyc sat data json file
         type: 'geojson',
-        data: 'https://raw.githubusercontent.com/natalikec/Lab2/main/green_spaces.geojson',
+        data: 'https://github.com/ahmadashraf1/GG472-Lab3/blob/main/NYCdata.json',
         'generateId': true //Create a unique ID for each feature
     });
